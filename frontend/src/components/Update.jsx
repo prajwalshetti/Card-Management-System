@@ -66,8 +66,9 @@ function Update() {
             setError(err?.response?.data?.message||"An unknown error occured")
         }
     }
-    useEffect(()=>getUser,[])
-
+    useEffect(() => {
+        getUser();
+    }, []);
     return (
         <div className='flex justify-center pt-10'>
             <div className="bg-white shadow-lg rounded-lg p-8">
